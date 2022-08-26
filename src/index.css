@@ -60,3 +60,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.active {
+	color: whitesmoke !important;
+}
+
+.carrito-icono {
+	color: whitesmoke !important;
+	margin-top: 9px;
+}
+
+.carrito-nav {
+	display: flex;
+	
+}
+
+.titulo {
+	padding: 12px;
+	font-size: 3rem;
+    text-align: center;
+}
