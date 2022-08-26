@@ -1,8 +1,12 @@
 import React from "react";
 
+const nombrePagina = {
+    Nombre: "Foodrys",
+}
+
 const Titulo = () => {
     return (
-        <h1 className="titulo">¡Bienvenido a Foodrys!</h1>
+        <h1 className="titulo">¡Bienvenido a {nombrePagina.Nombre}!</h1>
     )
 }
 
