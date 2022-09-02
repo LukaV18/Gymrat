@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import ItemList from "../utils/ItemList";
 
 
 const ItemListContainer = (props) => {
@@ -11,6 +12,7 @@ const ItemListContainer = (props) => {
                                 <p className="card-text text-center">{props.descripción}</p>
                                 <ItemCount />
                                 <a href="#" className="btn btn-primary btn-compra">{props.precio}</a>
+                                <a href="#" className="btn btn-secondary btn-compra">Detalles</a>
                             </div>
         </div>
     )

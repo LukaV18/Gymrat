@@ -1,7 +1,7 @@
 
 import Navbar from "./componentes/Navbar"
-import ItemListContainer from './componentes/ItemListContainer';
 import Data from './componentes/Data';
+import Carta from "./container/Carta";
 
 function App() {
   return (
@@ -11,16 +11,7 @@ function App() {
         <Navbar />
       </header> 
       <div className="fondo-menu col d-flex justify-content-center">
-        {
-          Data.map(item => (
-            <ItemListContainer
-            img={item.img}
-            carta={item.carta}
-            descripción={item.descripción}
-            precio={item.precio}
-            />
-          ))
-        }
+        <Carta items={Data} />
       </div>
     </div>
     </>

@@ -4,30 +4,35 @@ import PcComun2 from '../assets/hamburguesa.jpg'
 
 const Data = [
     {
+        id: 1,
         img:PcComun1,
         carta: "pc común 1",
         descripción: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         precio: "Añadir al Carrito"
     },
     {
+        id: 2,
         img:PcComun2,
         carta: "pc común 2",
         descripción: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         precio: "Añadir al Carrito"
     },
     {
+        id: 3,
         img:PcComun2,
         carta: "pc común 3",
         descripción: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         precio: "Añadir al Carrito"
     },
     {
+        id: 4,
         img:PcComun1,
         carta: "pc común 4",
         descripción: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         precio: "Añadir al Carrito"
     },
     {
+        id: 5,
         img:PcComun1,
         carta: "pc común 5",
         descripción: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
