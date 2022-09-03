@@ -1,8 +1,8 @@
 import PcComun1 from '../assets/dia-hamburguesa-m.jpg'
 import PcComun2 from '../assets/hamburguesa.jpg'
+import React from 'react';
 
-
-const Data = [
+const Productos = [
     {
         id: 1,
         img:PcComun1,
@@ -40,4 +40,4 @@ const Data = [
     }
 ]
 
-export default Data;
+export default Productos; 

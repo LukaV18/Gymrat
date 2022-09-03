@@ -1,7 +1,6 @@
 
 import Navbar from "./componentes/Navbar"
-import Data from './componentes/Data';
-import Carta from "./container/Carta";
+import ItemListContainer from "./componentes/ItemListContainer";
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
         <Navbar />
       </header> 
       <div className="fondo-menu col d-flex justify-content-center">
-        <Carta items={Data} />
+        <ItemListContainer/>
       </div>
     </div>
     </>

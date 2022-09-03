@@ -1,20 +1,28 @@
 import React from "react";
 import ItemCount from "./ItemCount";
-import ItemList from "../utils/ItemList";
+import ItemList from "./ItemList";
+import { useState } from "react";
+import {useEffect} from "react";
+import promise from "../utils/promesa";
+import Productos from "./Data";
 
+export const ItemListContainer = () => {
+    const [data, setData] = useState([]);
 
-const ItemListContainer = (props) => {
-    return (
-        <div className="card card-menu">
-                        <img src={props.img} className="card-img-top" alt="..." />
-                            <div className="card-body">
-                                <h5 className="card-title text-center">{props.carta}</h5>
-                                <p className="card-text text-center">{props.descripción}</p>
-                                <ItemCount />
-                                <a href="#" className="btn btn-primary btn-compra">{props.precio}</a>
-                                <a href="#" className="btn btn-secondary btn-compra">Detalles</a>
-                            </div>
-        </div>
+    //componentDidMount
+    useEffect(() => {
+        //usar la promesa
+        promise(Productos)
+            .then(res => setData(res))
+            .catch(err => console.log(err))
+    }, [])
+
+    
+    return ( <>
+        
+                <ItemList data={data}/>
+            </>
+                                
     )
 }
 
