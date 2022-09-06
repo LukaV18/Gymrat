@@ -1,5 +1,4 @@
 import React from "react";
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import { useState } from "react";
 import {useEffect} from "react";
@@ -9,6 +8,10 @@ import Productos from "./Data";
 export const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
+    const onAdd = (quantity) => {
+        console.log( `Compraste ${quantity}.` )
+    }
+    
     //componentDidMount
     useEffect(() => {
         //usar la promesa

@@ -4,7 +4,11 @@ import Item from "./item";
 
 const ItemList = ({data = []}) => {
     return (
+        <div className="display">
+        {
         data.map(producto => <Item key={producto.id} info={producto}/>)
+        }
+        </div>
     );
 }
 

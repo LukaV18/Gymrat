@@ -1,8 +1,9 @@
-import { React, useState } from 'react'
+import  React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-
-
+import Item from './item'
+import { Link } from 'react-router-dom'
+import Productos from './Data'
 
 const MySwal = withReactContent(Swal)
 
@@ -19,12 +20,13 @@ const Toast = Swal.mixin({
 })
 
 
-const ItemCount = () => {
-    const [counter, setCounter] = useState(1);
+export const ItemCount = ({initial, stock, onAdd, props}) => {
+    const [count, setCount] = useState(initial);
 
+    
   //increase counter
     const increase = () => {
-    setCounter(count => count + 1);
+    setCount(count => count + 1);
     Toast.fire({
       icon: 'success',
       title: 'Success'
@@ -33,7 +35,7 @@ const ItemCount = () => {
 
   //decrease counter
     const decrease = () => {
-    setCounter(count => count - 1);
+    setCount(count => count - 1);
     Toast.fire({
       icon: 'warning',
       title: 'Warning'
@@ -41,13 +43,20 @@ const ItemCount = () => {
     };
 
     return (
+      <>
         <div className="counter">
-            <div className="btncontainer btn-group btn-group-toggle">
-                <button className="controlbtn btn btn-primary btn btn-outline-dark" type="button" onClick={increase}> + </button>
-                <span className="counteroutput btn btn-secondary btn-lg disabled">{counter}</span>
-                <button className="controlbtn btn btn-primary btn btn-outline-dark" type="button" onClick={decrease}> - </button>
-            </div>
+              <div className="btncontainer btn-group btn-group-toggle m-0">
+                  <button disabled={count >= stock} className=" btn btn-primary btn btn-outline-dark" type="button" onClick={increase}> + </button>
+                  <span className=" btn btn-secondary disabled">{count}</span>
+                  <button disabled={count <= 1} className=" btn btn-primary btn btn-outline-dark" type="button" onClick={decrease}> - </button>
+              </div>
         </div>
+        <a href="#" disabled={stock <= 0} onClick={() => onAdd(count)} className="btn btn-primary btn-compra">Agregar al Carrito</a>
+        <Link className="detalles-link"  to={`/item/${props.id}`}>
+        <a href="#" className="btn btn-secondary btn-compra">Detalles</a>
+        </Link>
+      </>
+        
     );
 }
 

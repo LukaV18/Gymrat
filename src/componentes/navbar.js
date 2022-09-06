@@ -7,6 +7,7 @@ import CartWidget from "./CartWidget";
 
 const Navbar = () => {
     return (
+    <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-2">
     <a className="navbar-brand" href="#">Foodrys</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +33,7 @@ const Navbar = () => {
         </form>
     </div>
     </nav>
+    </header>
     );
 }
 
