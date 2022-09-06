@@ -18,7 +18,7 @@ export const ItemDetailContainer = () => {
 //diseño del loading cuando haces click en un producto.
   return (
     oneProduct ? <ItemDetail item={oneProduct}/> :
-    <h3><p>Loading</p></h3>
+    <h3><p>Cargando</p></h3>
   )
 }
 
