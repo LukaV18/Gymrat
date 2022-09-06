@@ -4,28 +4,29 @@ import { useState } from "react";
 import {useEffect} from "react";
 import promise from "../utils/promesa";
 import Productos from "./Data";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
-    const [data, setData] = useState([]);
-
-    const onAdd = (quantity) => {
-        console.log( `Compraste ${quantity}.` )
-    }
-    
-    //componentDidMount
+    const [products, setProducts] = useState([]);
+    const {id} = useParams();
+    console.log(id)
+  
     useEffect(() => {
-        //usar la promesa
+      if (id) {
+        promise(Productos.filter(item => item.category == id))
+          .then(result => setProducts(result))
+          .catch(err => console.log(err))
+      } else {
         promise(Productos)
-            .then(res => setData(res))
-            .catch(err => console.log(err))
-    }, [])
+          .then(result => setProducts(result))
+          .catch(err => console.log(err))
+      }
+    }, [id])
 
     
-    return ( <>
-        
-                <ItemList data={data}/>
-            </>
-                                
+    return ( 
+        products.length > 0 ? <ItemList item={products}/> :
+        <h2><p>Loading</p></h2>                   
     )
 }
 

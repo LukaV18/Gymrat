@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ItemCount from "./ItemCount";
 
-export const ItemDetail = ({props}) => {
+export const ItemDetail = (props) => {
     return (
         <div className= "container">
             <div className= "detail">

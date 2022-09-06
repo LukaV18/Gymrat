@@ -20,7 +20,7 @@ const Toast = Swal.mixin({
 })
 
 
-export const ItemCount = ({initial, stock, onAdd, props}) => {
+export const ItemCount = ({initial, stock, onAdd}, props) => {
     const [count, setCount] = useState(initial);
 
     
@@ -53,7 +53,7 @@ export const ItemCount = ({initial, stock, onAdd, props}) => {
         </div>
         <a href="#" disabled={stock <= 0} onClick={() => onAdd(count)} className="btn btn-primary btn-compra">Agregar al Carrito</a>
         <Link className="detalles-link"  to={`/item/${props.id}`}>
-        <a href="#" className="btn btn-secondary btn-compra">Detalles</a>
+        <div href="#" className="btn btn-secondary btn-compra">Detalles</div>
         </Link>
       </>
         
