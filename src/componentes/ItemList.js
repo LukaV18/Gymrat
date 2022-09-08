@@ -2,25 +2,27 @@ import React from "react";
 import Item from "./item";
 
 
-const ItemList = (props) => {
+function ItemList(props) {
 
-    let item = props.item;
+  let item = props.item;
 
-    return (
-        <div className="display">
-        {item.map((item) => (
+//llamado con props al PcListado
+  return(
+      <div className="display d-flex justify-content-around">
+          {item.map((item) => (
             <Item
               key={item.id}
               img={item.img}
-              carta={item.carta}
-              descripción={item.descripción}
+              titulo={item.titulo}
+              descripcion={item.descripcion}
               precio={item.precio}
               stock={item.stock}
               id={item.id}
             />
           ))}
-        </div>
-    );
+      </div>
+  );
 }
+
 
 export default ItemList;
