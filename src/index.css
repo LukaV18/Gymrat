@@ -83,14 +83,6 @@ summary,
 time,
 mark,
 audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -186,8 +178,10 @@ code {
 }
 
 .carrito-icono {
-	color: whitesmoke !important;
-	margin-top: 9px;
+		color: whitesmoke !important;
+		margin-top: 0.3rem;
+		font-size: 1.7rem;
+		margin-right: 2rem;
 }
 
 .carrito-nav {
@@ -208,17 +202,18 @@ code {
 }
 
 .card-menu {
-    width: 18rem;
+	width: 18rem;
 	margin: 10px;
 }
 
 .counter {
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 }
+
 .btn-compra {
-	display: flex !important; 
-    justify-content: center;
+	display: flex !important;
+	justify-content: center;
 	margin: 12px;
 }
 
@@ -229,4 +224,117 @@ code {
 a {
 	text-decoration-line: none !important;
 	-moz-text-decoration-line: none !important;
+}
+
+.contador-medio {
+	margin: 10px;
+}
+
+.contadores {
+	border-radius: 20px;
+	border: 0;
+	background: none;
+}
+
+.full {
+	border: 2px solid black;
+	width: fit-content;
+	justify-content: center;
+	margin: auto;
+	border-radius: 11px;
+}
+
+.btncontainer {
+    padding: 0px 0.6rem 0px 0.6rem;
+}
+.Nav-logo {
+    width: 13rem;
+    height: 6rem;
+}
+
+.nav-link {
+	font-size: 1.2rem !important; 
+}
+
+.card-img-height {
+	min-height: 18rem;
+    max-height: 18rem;
+}
+
+.card-title {
+	font-size: 2.2rem;
+    font-weight: 400;
+    font-family: 'Bebas Neue', cursive;
+}
+
+button {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+.btn {
+	transition: 0.5s !important;
+	-webkit-transition: 0.5s !important;
+	-moz-transition: 0.5s !important;
+	-ms-transition: 0.5s !important;
+	-o-transition: 0.5s !important;
+}
+
+.btn-agregar-carrito {
+	
+		margin: 10px 5px 10px 0px !important;
+		font-size: 0.8rem !important;
+		padding: 0.6rem !important;
+	
+}
+
+.sombra-1 {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-menu {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+.card-menu:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.detalle-container {
+	background: rgb(94,31,39);
+	background: linear-gradient(90deg, rgba(94,31,39,1) 0%, rgba(38,12,16,1) 100%);
+	color: wheat;
+	border: 2px solid black;
+	border-radius:20px ;
+	-webkit-border-radius:20px ;
+	-moz-border-radius:20px ;
+	-ms-border-radius:20px ;
+	-o-border-radius:20px ;
+	margin: 1rem 25rem 0rem 25rem !important;
+	font-family: 'Chakra Petch', sans-serif;
+	font-weight: 500;
+}
+
+.detail-image {
+	border-radius: 20px 0px 0px 20px;
+	-webkit-border-radius: 20px 0px 0px 20px;
+	-moz-border-radius: 20px 0px 0px 20px;
+	-ms-border-radius: 20px 0px 0px 20px;
+	-o-border-radius: 20px 0px 0px 20px;
+}
+
+.col-image {
+	max-width: 500px;
+}
+
+.col-details {
+    margin-right: 10px;
 }

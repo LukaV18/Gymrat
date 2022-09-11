@@ -8,11 +8,12 @@ function ItemDetail(props) {
     }
 
     return (
-        <div className= "row m-1">
+        
+        <div className= "row detalle-container">
             <div className= "col">
-                <img className="detail-image" src={props.item.img} alt={props.item.alt} />
+                <img className="detail-image col-image" src={props.item.img} alt={props.item.alt} />
             </div>
-            <div className="col">
+            <div className="col col-details">
                 <div>
                     <div>
                         <h1>{props.item.titulo}</h1>
@@ -29,7 +30,7 @@ function ItemDetail(props) {
                 <div>
                     <p>{props.item.precio}</p>
                     <div>
-                        <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
                     </div>
                 </div>
             </div>    

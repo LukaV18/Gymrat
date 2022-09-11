@@ -27,35 +27,37 @@ export const ItemCount = ({initial, stock, onAdd}) => {
   //increase counter
     const increase = () => {
     setCount(count => count + 1);
-    Toast.fire({
-      icon: 'success',
-      title: 'Success'
-    })
+   
     };
 
   //decrease counter
     const decrease = () => {
     setCount(count => count - 1);
-    Toast.fire({
-      icon: 'warning',
-      title: 'Warning'
-    })
+    
     };
 
     
-    
+
 
     return (
-      <>
-        <div className="counter">
+      
+      <div className='d-flex contador-comprar'>
+        <div className="counter full boder">
               <div className="btncontainer btn-group btn-group-toggle m-0">
-                  <button disabled={count >= stock} className=" btn btn-primary btn btn-outline-dark" type="button" onClick={increase}> + </button>
-                  <span className=" btn btn-secondary disabled">{count}</span>
-                  <button disabled={count <= 1} className=" btn btn-primary btn btn-outline-dark" type="button" onClick={decrease}> - </button>
+                  <button disabled={count >= stock} className="contadores" type="button" onClick={increase}><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
+  <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+</svg></button>
+                  <p className="contador-medio">{count}</p>
+                  <button disabled={count <= 1} className="contadores" type="button" onClick={decrease}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-dash" viewBox="0 0 16 16">
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                  </svg>
+                  </button>
               </div>
         </div>
-        <a href="#" disabled={stock <= 0} onClick={() => onAdd(count)} className="btn btn-primary btn-compra">Agregar al Carrito</a>
-      </>   
+        <a href="#" disabled={stock <= 0} onClick={() => onAdd(count)} className="btn btn-danger btn-agregar-carrito">Agregar al Carrito</a>
+      </div>
+       
     );
 }
 

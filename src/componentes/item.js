@@ -2,20 +2,39 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-right',
+  iconColor: 'white',
+  customClass: {
+    popup: 'colored-toast'
+  },
+  showConfirmButton: false,
+  timer: 1500,
+  timerProgressBar: true
+})
 
 const Item = (props) => {
 
     const onAdd = (quantity) => {
-        console.log( `Compraste ${quantity}.` )
+        Toast.fire({
+            icon: 'success',
+            title: `Agregaste ${quantity} unidades al carrito!`
+          })
     }
  
     return(
         <>
-        <div className="card card-menu">
-                        <img src={props.img} className="card-img-top" alt="..." />
+        <div className="card card-menu sombra-1">
+                        <img src={props.img} className="card-img-top card-img-height" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title text-center">{props.titulo}</h5>
-                                <p className="card-text text-center">{props.descripcion}</p>
+                                <h5 className="card-title">$ {props.precio}</h5>
+                                <p className="card-text">{props.titulo}</p>
                             </div>
                             <ItemCount initial={1} stock={5} onAdd={onAdd} />
         <Link className="detalles-link"  to={`/item/${props.id}`}>

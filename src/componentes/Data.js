@@ -1,12 +1,14 @@
-import PcComun1 from '../assets/dia-hamburguesa-m.jpg'
-import PcComun2 from '../assets/hamburguesa.jpg'
-
+import Caminadora1 from '../assets/Caminadora1.jpg'
+import Caminadora2 from '../assets/Caminadora2.jpg'
+import Caminadora3 from '../assets/Caminadora3.jpg'
+import Caminadora4 from '../assets/Caminadora4.jpg'
+import Caminadora5 from '../assets/Caminadora5.jpg'
 
 export const Productos = [
     {
         id: 1,
-        img:PcComun1,
-        titulo: "pc común 1",
+        img:Caminadora1,
+        titulo: "Cinta de correr eléctrica Femmto Runner 16K 220V",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
@@ -14,8 +16,8 @@ export const Productos = [
     },
     {
         id: 2,
-        img:PcComun2,
-        titulo: "pc común 2",
+        img:Caminadora2,
+        titulo: "Cinta de correr eléctrica Enerfit 780 220V",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
@@ -23,8 +25,8 @@ export const Productos = [
     },
     {
         id: 3,
-        img:PcComun2,
-        titulo: "pc común 3",
+        img:Caminadora3,
+        titulo: "Cinta de correr eléctrica Expert Fitness MSG-8002 240V",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
@@ -32,8 +34,8 @@ export const Productos = [
     },
     {
         id: 4,
-        img:PcComun1,
-        titulo: "pc común 4",
+        img:Caminadora4,
+        titulo: "Cinta de correr eléctrica Rizer CC1501 220V",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
@@ -41,8 +43,8 @@ export const Productos = [
     },
     {
         id: 5,
-        img:PcComun1,
-        titulo: "pc común 5",
+        img:Caminadora5,
+        titulo: "Cinta de correr eléctrica Randers ARG-318 220V ",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
