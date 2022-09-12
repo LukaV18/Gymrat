@@ -12,7 +12,12 @@ export const Productos = [
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
-        precio: 15000
+        precio: 15000,
+        categoryId: 1,
+        category: {
+            name: "Caminadoras",
+            id: 1 
+        } 
     },
     {
         id: 2,
@@ -21,7 +26,12 @@ export const Productos = [
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
-        precio: 15000 
+        precio: 15000,
+        categoryId: 1,
+        category: {
+            name: "Caminadoras",
+            id: 1 
+        }  
     },
     {
         id: 3,
@@ -30,7 +40,12 @@ export const Productos = [
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
-        precio: 15000 
+        precio: 15000,
+        categoryId: 1,
+        category: {
+            name: "Caminadoras",
+            id: 1 
+        }  
     },
     {
         id: 4,
@@ -39,7 +54,12 @@ export const Productos = [
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
-        precio: 15000 
+        precio: 15000,
+        categoryId: 1,
+        category: {
+            name: "Caminadoras",
+            id: 1 
+        }  
     },
     {
         id: 5,
@@ -48,6 +68,11 @@ export const Productos = [
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         carrito: "Añadir al Carrito",
         stock: 10,
-        precio: 15000 
+        precio: 15000,
+        categoryId: 1,
+        category: {
+            name: "Caminadoras",
+            id: 1 
+        }  
     }
 ]

@@ -14,7 +14,7 @@ function ItemListContainer() {
 
   useEffect(() => {
     if (id) {
-      promise(Productos.filter(item => item.category == id))
+      promise(Productos.filter(item => item.categoryId == id))
         .then(result => setProducts(result))
         .catch(err => console.log(err))
     } else {

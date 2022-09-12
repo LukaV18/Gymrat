@@ -227,20 +227,23 @@ a {
 }
 
 .contador-medio {
-	margin: 10px;
+	margin: 15px;
 }
 
 .contadores {
 	border-radius: 20px;
 	border: 0;
 	background: none;
+	
 }
 
+
+
 .full {
-	border: 2px solid black;
+	border: 2px solid #f75859;
 	width: fit-content;
 	justify-content: center;
-	margin: auto;
+	margin: 2px;
 	border-radius: 11px;
 }
 
@@ -309,8 +312,8 @@ button {
 }
 
 .detalle-container {
-	background: rgb(94,31,39);
-	background: linear-gradient(90deg, rgba(94,31,39,1) 0%, rgba(38,12,16,1) 100%);
+	background: rgb(105,64,70);
+background: linear-gradient(90deg, rgba(105,64,70,1) 0%, rgba(38,12,16,1) 100%);
 	color: wheat;
 	border: 2px solid black;
 	border-radius:20px ;
@@ -337,4 +340,24 @@ button {
 
 .col-details {
     margin-right: 10px;
+}
+
+.contador-comprar {
+	justify-content: space-evenly;
+}
+
+.counter {
+	
+}
+
+.btncontainer {
+	height: 50px;
+}
+
+.bi-dash {
+	height: 50px;
+}
+
+.detail-text {
+	color: #f75859;
 }

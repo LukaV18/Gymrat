@@ -21,7 +21,7 @@ function ItemDetail(props) {
                 </div>
 
                 <div>
-                    <h3>Detalles</h3>
+                    <h3 className="detail-text">Detalles</h3>
                     <div>
                         <p>{props.item.descripcion}</p>
                     </div>

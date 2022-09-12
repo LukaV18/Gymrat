@@ -2,6 +2,7 @@ import React from "react";
 import Logo from '../assets/LogoGym.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {} from "@fortawesome/free-brands-svg-icons"
+import { Link } from "react-router-dom";
 
 import CartWidget from "./CartWidget";
 
@@ -18,13 +19,13 @@ const Navbar = () => {
     <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-                <a className="nav-link" href="#">Productos</a>
+                <Link to='/category/1'><p className="nav-link">Productos</p></Link> 
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Cuenta</a>
+                <Link to='/category/1'><p className="nav-link">Cuenta</p></Link> 
             </li>
             <li className="nav-item carrito-nav">
-                <a className="nav-link" href="#">Carrito</a>
+                <Link to='/category/1'><p className="nav-link">Carrito</p></Link>
             </li>
             </ul>
         <div className="d-flex">
