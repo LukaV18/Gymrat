@@ -5,6 +5,7 @@ import {useEffect} from "react";
 import promise from "../utils/promesa";
 import { Productos } from "./Data";
 import { useParams } from "react-router-dom";
+import '../css/loading.scss';
 
 function ItemListContainer() {
 
@@ -27,8 +28,22 @@ function ItemListContainer() {
 //diseño del loading cuando iniciamos la pagina.
   return (
         products.length > 0 ? <ItemList item={products}/> :
-        <div className="container">
-          <p>Cargo</p>
+        <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
   );
 }

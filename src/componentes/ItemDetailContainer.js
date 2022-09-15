@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import promise from "../utils/promesa";
 import { Productos } from "./Data";
 import { useParams } from "react-router-dom";
+import '../css/loading.scss';
 
 function ItemDetailContainer() {
   const [oneProduct, setOneProduct] = useState();
@@ -19,7 +20,23 @@ function ItemDetailContainer() {
 //diseño del loading cuando haces   click en un producto.
   return (
     oneProduct ? <ItemDetail item={oneProduct}/> :
-    <h3>Cargando</h3>
+    <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
   )
 }
 

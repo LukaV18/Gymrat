@@ -18,6 +18,10 @@ function ItemList(props) {
               precio={item.precio}
               stock={item.stock}
               id={item.id}
+              pesoMaximo={item.pesoMaximo}
+              peso={item.peso}
+              velocidad={item.velocidad}
+              dimenciones={item.dimenciones}
             />
           ))}
       </div>

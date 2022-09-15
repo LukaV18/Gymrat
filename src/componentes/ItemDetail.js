@@ -46,12 +46,15 @@ function ItemDetail({item, count, stock, quantity}) {
                 <div>
                     <h3 className="detail-text">Detalles</h3>
                     <div>
-                        <p>{item.descripcion}</p>
+                        <p>Velocidad Máxima: {item.velocidad}</p>
+                        <p>Dimensiones: {item.dimenciones}</p>
+                        <p>Peso Máximo: {item.pesoMaximo}</p>
+                        <p>Peso: {item.peso}</p>
                     </div>
                 </div>
 
                 <div>
-                    <p>{item.precio}</p>
+                    <p className="detail-precio">${item.precio}</p>
                     <div>
                         {
                             goToCart

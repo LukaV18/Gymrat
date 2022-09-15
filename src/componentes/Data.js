@@ -9,7 +9,19 @@ export const Productos = [
         id: 1,
         img:Caminadora1,
         titulo: "Cinta de correr eléctrica Femmto Runner 16K 220V",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        descripcion: `Es plegable.
+        Peso máximo soportado: 130kg.
+        Alcanza una velocidad máxima de 16km/h.
+        Su potencia es de 3hp.
+        Tiene 12 programas preestablecidos.
+        Incluye monitoreo de la frecuencia cardíaca.
+        Conexión directa por AUX, MP3 a tus dispositivos para musicalizar el entrenamiento.
+        Dimensiones: 72cm de ancho, 125cm de alto y 170cm de largo.
+        Pesa 130kg.
+        Con display.
+        Se apaga automáticamente.
+        Cuenta con ruedas que facilitan su traslado.
+        Entrenamientos sin límites.`,
         carrito: "Añadir al Carrito",
         stock: 10,
         precio: 15000,
@@ -17,7 +29,13 @@ export const Productos = [
         category: {
             name: "Caminadoras",
             id: 1 
-        } 
+        },
+        // detalles
+        pesoMaximo:"Máximo soportado de 130kg.",
+        peso:"130 kilogramos.",
+        velocidad: "Alcanza una velocidad máxima de 16km/h.",
+        dimenciones: "Dimensiones: 72cm de ancho, 125cm de alto y 170cm de largo.",
+        
     },
     {
         id: 2,
@@ -31,7 +49,12 @@ export const Productos = [
         category: {
             name: "Caminadoras",
             id: 1 
-        }  
+        },
+        // detalles
+        pesoMaximo:"Máximo soportado de 130kg.",
+        peso:"130 kilogramos.",
+        velocidad: "Alcanza una velocidad máxima de 16km/h.",
+        dimenciones: "Dimensiones: 72cm de ancho, 125cm de alto y 170cm de largo.",
     },
     {
         id: 3,
@@ -45,7 +68,12 @@ export const Productos = [
         category: {
             name: "Caminadoras",
             id: 1 
-        }  
+        },
+        // detalles
+        pesoMaximo:"Máximo soportado de 130kg.",
+        peso:"130 kilogramos.",
+        velocidad: "Alcanza una velocidad máxima de 16km/h.",
+        dimenciones: "Dimensiones: 72cm de ancho, 125cm de alto y 170cm de largo.",
     },
     {
         id: 4,
@@ -59,7 +87,12 @@ export const Productos = [
         category: {
             name: "Caminadoras",
             id: 1 
-        }  
+        },
+        // detalles
+        pesoMaximo:"Máximo soportado de 130kg.",
+        peso:"130 kilogramos.",
+        velocidad: "Alcanza una velocidad máxima de 16km/h.",
+        dimenciones: "Dimensiones: 72cm de ancho, 125cm de alto y 170cm de largo.",
     },
     {
         id: 5,
@@ -73,6 +106,11 @@ export const Productos = [
         category: {
             name: "Caminadoras",
             id: 1 
-        }  
+        },
+        // detalles
+        pesoMaximo:"Máximo soportado de 130kg.",
+        peso:"130 kilogramos.",
+        velocidad: "Alcanza una velocidad máxima de 16km/h.",
+        dimenciones: "Dimensiones: 72cm de ancho, 125cm de alto y 170cm de largo.",
     }
 ]

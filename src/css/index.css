@@ -361,3 +361,7 @@ background: linear-gradient(90deg, rgba(105,64,70,1) 0%, rgba(38,12,16,1) 100%);
 .detail-text {
 	color: #f75859;
 }
+
+.detail-precio {
+    font-size: 32px;
+}
