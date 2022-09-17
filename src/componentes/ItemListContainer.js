@@ -11,7 +11,7 @@ function ItemListContainer() {
 
   const [products, setProducts] = useState([]);
   const {id} = useParams();
-  console.log(id)
+  
 
   useEffect(() => {
     if (id) {
@@ -28,7 +28,7 @@ function ItemListContainer() {
 //diseño del loading cuando iniciamos la pagina.
   return (
         products.length > 0 ? <ItemList item={products}/> :
-        <div class="loader">
+        <div className="loader">
           <span></span>
           <span></span>
           <span></span>

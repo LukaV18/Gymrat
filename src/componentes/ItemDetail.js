@@ -3,6 +3,7 @@ import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { useCartContext } from "../context/CartContext";
 
 const MySwal = withReactContent(Swal)
 
@@ -21,13 +22,15 @@ const Toast = Swal.mixin({
 function ItemDetail({item, count, stock, quantity}) {
     const [goToCart, setGoToCart] = useState(false)
 
+    const {addProduct} = useCartContext()
 
     const onAdd = (quantity) => {
         setGoToCart(true)
         Toast.fire({
             icon: 'success',
             title: `Agregaste ${quantity} unidades al carrito!`
-          })
+        })
+        addProduct(item,quantity);
     }
 
     return (

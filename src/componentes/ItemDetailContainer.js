@@ -16,11 +16,11 @@ function ItemDetailContainer() {
     .catch(err => console.log(err))
   }, [])
   
-  console.log(oneProduct)
+  
 //diseño del loading cuando haces   click en un producto.
   return (
     oneProduct ? <ItemDetail item={oneProduct}/> :
-    <div class="loader">
+    <div className="loader">
           <span></span>
           <span></span>
           <span></span>
