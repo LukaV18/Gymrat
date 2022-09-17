@@ -7,17 +7,22 @@ export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
+    
+    const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
-    const addProduct = (item, newQuantity) => {
-        const newCart = cart.filter(prod => prod.id !== item.id)
-        newCart.push({ ...item, quantity: newQuantity})
-        setCart(newCart)
+    const addProduct = (item, quantity) => {
+        if (isInCart(item.id)) {
+        setCart(cart.map(producto => {
+            return producto.id === item.id ? {...producto, quantity: producto.quantity + quantity} : producto
+        }));
+    } else {
+        setCart([...cart, {...item,quantity}]);
+    }
     }
 
 
     const clearCart = () => setCart([]);
 
-    const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
         
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
 
@@ -28,12 +33,13 @@ const CartProvider = ({children}) => {
         <CartContext.Provider value={{
             clearCart,
             isInCart,
-            removeProduct,
-            addProduct
+            addProduct,
+            removeProduct
         }}>
             {children}
         </CartContext.Provider>
     )
 }
+
 
 export default CartProvider;
