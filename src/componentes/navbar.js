@@ -29,7 +29,7 @@ const Navbar = () => {
             </li>
             </ul>
         <div className="d-flex">
-            <a className="carrito-icono" href="#"><CartWidget /></a> 
+            <Link className="carrito-icono" to='/cart'><CartWidget /></Link> 
             <form className="form-inline my-2 my-lg-0 d-flex align-items-center p-1">
             <input className="form-control mr-sm-2 me-1" type="search" placeholder="Search" aria-label="Search"></input>
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
