@@ -6,6 +6,7 @@ import promise from "../utils/promesa";
 import { Productos } from "./Data";
 import { useParams } from "react-router-dom";
 import '../css/loading.scss';
+import { getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 function ItemListContainer() {
 
@@ -14,15 +15,22 @@ function ItemListContainer() {
   
 
   useEffect(() => {
-    if (id) {
-      promise(Productos.filter(item => item.categoryId == id))
-        .then(result => setProducts(result))
-        .catch(err => console.log(err))
-    } else {
-      promise(Productos)
-        .then(result => setProducts(result))
-        .catch(err => console.log(err))
-    }
+    const querydb = getFirestore();
+    
+    const queryFilter = query(queryCollection)
+      const queryCollection = collection(querydb, 'Products' )
+      getDocs(queryCollection)
+        .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
+
+    // if (id) {
+    //   promise(Productos.filter(item => item.categoryId == id))
+    //     .then(result => setProducts(result))
+    //     .catch(err => console.log(err))
+    // } else {
+    //   promise(Productos)
+    //     .then(result => setProducts(result))
+    //     .catch(err => console.log(err))
+    // }
   }, [id])
 
 //diseño del loading cuando iniciamos la pagina.
