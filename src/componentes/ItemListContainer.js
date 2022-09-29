@@ -11,27 +11,22 @@ import { getFirestore, collection, getDocs, query, where} from 'firebase/firesto
 function ItemListContainer() {
 
   const [products, setProducts] = useState([]);
-  const {id} = useParams();
+  const {categoryId} = useParams();
   
 
   useEffect(() => {
     const querydb = getFirestore();
-    
-    const queryFilter = query(queryCollection)
-      const queryCollection = collection(querydb, 'Products' )
+    const queryCollection = collection(querydb, 'Products' )
+
+    if (categoryId) {
+      const queryFilter = query(queryCollection, where('categoryId', '==', categoryId))
+      getDocs(queryFilter)
+        .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
+    } else {
       getDocs(queryCollection)
         .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
-
-    // if (id) {
-    //   promise(Productos.filter(item => item.categoryId == id))
-    //     .then(result => setProducts(result))
-    //     .catch(err => console.log(err))
-    // } else {
-    //   promise(Productos)
-    //     .then(result => setProducts(result))
-    //     .catch(err => console.log(err))
-    // }
-  }, [id])
+    }
+  }, [categoryId])
 
 //diseño del loading cuando iniciamos la pagina.
   return (
