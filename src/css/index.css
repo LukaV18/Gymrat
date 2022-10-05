@@ -101,6 +101,7 @@ section {
 
 body {
 	line-height: 1;
+	background: radial-gradient(#eee,#444);  
 }
 
 ol,
@@ -178,10 +179,18 @@ code {
 }
 
 .carrito-icono {
-		color: whitesmoke !important;
-		margin-top: 0.3rem;
-		font-size: 1.7rem;
-		margin-right: 2rem;
+	color: whitesmoke !important;
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    display: flex;
+}
+
+.carrito-info {
+	font-family: 'Staatliches', cursive;
+    padding: 0px;
+	color: #f75859 !important;
+
 }
 
 .carrito-nav {
@@ -234,7 +243,7 @@ a {
 	border-radius: 20px;
 	border: 0;
 	background: none;
-	
+
 }
 
 
@@ -248,26 +257,27 @@ a {
 }
 
 .btncontainer {
-    padding: 0px 0.6rem 0px 0.6rem;
+	padding: 0px 0.6rem 0px 0.6rem;
 }
+
 .Nav-logo {
-    width: 13rem;
-    height: 6rem;
+	width: 13rem;
+	height: 6rem;
 }
 
 .nav-link {
-	font-size: 1.2rem !important; 
+	font-size: 1.2rem !important;
 }
 
 .card-img-height {
 	min-height: 18rem;
-    max-height: 18rem;
+	max-height: 18rem;
 }
 
 .card-title {
 	font-size: 2.2rem;
-    font-weight: 400;
-    font-family: 'Bebas Neue', cursive;
+	font-weight: 400;
+	font-family: 'Bebas Neue', cursive;
 }
 
 button {
@@ -287,11 +297,11 @@ button {
 }
 
 .btn-agregar-carrito {
-	
-		margin: 10px 5px 10px 0px !important;
-		font-size: 0.8rem !important;
-		padding: 0.6rem !important;
-	
+
+	margin: 10px 5px 10px 0px !important;
+	font-size: 0.8rem !important;
+	padding: 0.6rem !important;
+
 }
 
 .sombra-1 {
@@ -312,15 +322,15 @@ button {
 }
 
 .detalle-container {
-	background: rgb(105,64,70);
-background: linear-gradient(90deg, rgba(105,64,70,1) 0%, rgba(38,12,16,1) 100%);
+	background: rgb(105, 64, 70);
+	background: linear-gradient(90deg, rgba(105, 64, 70, 1) 0%, rgba(38, 12, 16, 1) 100%);
 	color: wheat;
 	border: 2px solid black;
-	border-radius:20px ;
-	-webkit-border-radius:20px ;
-	-moz-border-radius:20px ;
-	-ms-border-radius:20px ;
-	-o-border-radius:20px ;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
 	margin: 1rem 25rem 0rem 25rem !important;
 	font-family: 'Chakra Petch', sans-serif;
 	font-weight: 500;
@@ -336,19 +346,18 @@ background: linear-gradient(90deg, rgba(105,64,70,1) 0%, rgba(38,12,16,1) 100%);
 
 .col-image {
 	max-width: 500px;
+	min-height: 465px;
 }
 
 .col-details {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .contador-comprar {
 	justify-content: space-evenly;
 }
 
-.counter {
-	
-}
+.counter {}
 
 .btncontainer {
 	height: 50px;
@@ -364,4 +373,66 @@ background: linear-gradient(90deg, rgba(105,64,70,1) 0%, rgba(38,12,16,1) 100%);
 
 .detail-precio {
     font-size: 32px;
+    border: 2px solid #f75859;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 11px;
 }
+
+.ItemCart {
+	display: flex;
+	margin: auto;
+	border: 2px solid #f75859;
+    border-radius: 11px;
+	width: 45rem;
+	width: 45rem;
+    margin-top: 2rem;
+}
+
+.cart-img {
+	border-radius: 9px 0px 0px 9px;
+	-webkit-border-radius: 9px 0px 0px 9px;
+	-moz-border-radius: 9px 0px 0px 9px;
+	-ms-border-radius: 9px 0px 0px 9px;
+	-o-border-radius: 9px 0px 0px 9px;
+	justify-content: space-between;
+    max-width: 18rem;
+	max-height: 20rem;
+}
+
+.cart-details {
+	padding: 10px 0px 10px 10px;
+	font-family: 'Staatliches', cursive;
+	font-size: 1.5rem;
+	border-left: 2px solid #f75859;
+}
+
+.cart-cantidad {
+	
+	font-size: 17px;
+}
+
+.btn-compra-carrito {
+	font-size: 22px;
+    width: fit-content;
+}
+
+.cart-subtotal {
+	border: 2px solid #f75859;
+	border-radius: 10px 0px 10px 0px;
+	width: fit-content;
+	padding: 0px 5px 0px 5px;
+}
+
+.carrito-precio-total {
+	margin: 10px auto 0px auto;
+    width: fit-content;
+    font-family: "Staatliches", cursive;
+    font-size: 3rem;
+}
+
+.carrito-icono {
+	margin-top: 5px;
+	margin-right: 5px;
+}
+

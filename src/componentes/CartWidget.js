@@ -8,7 +8,7 @@ const CartWidget = () => {
 const {totalProducts} = useCartContext()
     return (
         <>
-        <FontAwesomeIcon icon={faCartShopping} />
+        <FontAwesomeIcon icon={faCartShopping} className="carrito-icono"/>
         <span className="carrito-info">{totalProducts() || ''}</span>
         </>
         

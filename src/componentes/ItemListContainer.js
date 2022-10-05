@@ -19,7 +19,7 @@ function ItemListContainer() {
     const queryCollection = collection(querydb, 'Products' )
 
     if (categoryId) {
-      const queryFilter = query(queryCollection, where('categoryId', '==', categoryId))
+      const queryFilter = query(queryCollection, where('category', '==', categoryId))
       getDocs(queryFilter)
         .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
     } else {

@@ -53,6 +53,10 @@ function ItemDetail({item, count, stock, quantity}) {
                         <p>Dimensiones: {item.dimenciones}</p>
                         <p>Peso Máximo: {item.pesoMaximo}</p>
                         <p>Peso: {item.peso}</p>
+                        <p>Peso: {item.peso}</p>
+                        <p>Peso: {item.peso}</p>
+                        <p>Peso: {item.peso}</p>
+                        <p>Peso: {item.peso}</p>
                     </div>
                 </div>
 
@@ -62,7 +66,7 @@ function ItemDetail({item, count, stock, quantity}) {
                         {
                             goToCart
                         ? <Link to="/cart" className="btn btn-secondary btn-agregar-carrito">Terminar la compra</Link> :
-                        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+                        <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
                         
                         }
                     </div>

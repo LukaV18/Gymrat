@@ -19,13 +19,13 @@ const Navbar = () => {
     <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-                <Link to='/category/1'><p className="nav-link">Cintas</p></Link> 
+                <Link to='/category/Caminadoras'><p className="nav-link">Caminadoras</p></Link> 
             </li>
             <li className="nav-item">
-                <Link to='/category/2'><p className="nav-link">Pesas</p></Link> 
+                <Link to='/category/Pesas'><p className="nav-link">Pesas</p></Link> 
             </li>
             <li className="nav-item carrito-nav">
-                <Link to='/category/3'><p className="nav-link">Bancos</p></Link>
+                <Link to='/category/Bancos'><p className="nav-link">Bancos</p></Link>
             </li>
             </ul>
         <div className="d-flex">

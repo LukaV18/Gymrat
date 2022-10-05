@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useCartContext } from "../context/CartContext";
 
 const MySwal = withReactContent(Swal)
 
@@ -21,14 +21,17 @@ const Toast = Swal.mixin({
   timerProgressBar: true
 })
 
-const Item = (props) => {
+const Item = (props, {item}) => {
 
-    const onAdd = (quantity) => {
-        Toast.fire({
-            icon: 'success',
-            title: `Agregaste ${quantity} unidades al carrito!`
-          })
-    }
+  const {addProduct} = useCartContext()
+
+  const onAdd = (quantity) => {
+    Toast.fire({
+        icon: 'success',
+        title: `Agregaste ${quantity} unidades al carrito!`
+    })
+    addProduct(item,quantity);
+}
  
     return(
         <>
@@ -38,7 +41,7 @@ const Item = (props) => {
                                 <h5 className="card-title">$ {props.precio}</h5>
                                 <p className="card-text">{props.titulo}</p>
                             </div>
-                            <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                            <ItemCount initial={1} stock={props.stock} onAdd={onAdd} />
         <Link className="detalles-link"  to={`/item/${props.id}`}>
         <div href="#" className="btn btn-secondary btn-compra">Detalles</div>
         </Link>

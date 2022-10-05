@@ -16,16 +16,20 @@ const Cart = () => {
     }
 
     return (
-        <>
+        
+        <div className="carrito-container">
+
+        <div className="carrito-precio-total">
+            <h2>
+                PRECIO TOTAL: ${totalPrice()}
+            </h2>
+        </div>
 
         {
             cart.map(product => <ItemCart key={product.id} product={product} />)
         }
-        <p>
-            total: {totalPrice()}
-        </p>
 
-        </>
+        </div>
     )
 }
 
