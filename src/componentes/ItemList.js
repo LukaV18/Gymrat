@@ -8,7 +8,8 @@ function ItemList(props) {
 
 //llamado con props al PcListado
   return(
-      <div className="display d-flex justify-content-around">
+      <main>
+      <div className="display item-list justify-content-around">
           {item.map((item) => (
             <Item
               key={item.id}
@@ -22,9 +23,11 @@ function ItemList(props) {
               peso={item.peso}
               velocidad={item.velocidad}
               dimenciones={item.dimenciones}
+              Posiciones={item.Posiciones}
             />
           ))}
       </div>
+      </main>
   );
 }
 

@@ -41,7 +41,7 @@ const Item = (props, {item}) => {
                                 <h5 className="card-title">$ {props.precio}</h5>
                                 <p className="card-text">{props.titulo}</p>
                             </div>
-                            <ItemCount initial={1} stock={props.stock} onAdd={onAdd} />
+                            <div class="rating"> ★★★★★ </div>
         <Link className="detalles-link"  to={`/item/${props.id}`}>
         <div href="#" className="btn btn-secondary btn-compra">Detalles</div>
         </Link>

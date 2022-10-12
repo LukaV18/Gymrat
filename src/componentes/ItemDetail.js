@@ -49,23 +49,28 @@ function ItemDetail({item, count, stock, quantity}) {
                 <div>
                     <h3 className="detail-text">Detalles</h3>
                     <div>
-                        <p>Velocidad Máxima: {item.velocidad}</p>
-                        <p>Dimensiones: {item.dimenciones}</p>
-                        <p>Peso Máximo: {item.pesoMaximo}</p>
-                        <p>Peso: {item.peso}</p>
-                        <p>Peso: {item.peso}</p>
-                        <p>Peso: {item.peso}</p>
-                        <p>Peso: {item.peso}</p>
-                        <p>Peso: {item.peso}</p>
+                        <p>{item.velocidad}</p>
+                        <p>{item.dimenciones}</p>
+                        <p>{item.pesoMaximo}</p>
+                        <p>{item.peso}</p>
+                        <p>{item.Medidas}</p>
+                        <p>{item.Posiciones}</p>
+                        <p>{item.Separación}</p>
+                        <p>{item.largoAlture}</p>
                     </div>
                 </div>
 
                 <div>
+                    <div className="d-flex justify-content-around">
                     <p className="detail-precio">${item.precio}</p>
+                    <p className="detail-precio">Stock disponible: {item.stock}</p>
+                    </div>
                     <div>
                         {
                             goToCart
-                        ? <Link to="/cart" className="btn btn-secondary btn-agregar-carrito">Terminar la compra</Link> :
+                        ?   <div>
+                        <Link to="/cart" className="btn btn-danger btn-agregar-carrito">Terminar la compra</Link><Link to="/" className="btn btn-primary btn-agregar-carrito">Volver al catálogo 🛒</Link>   
+                        </div> :
                         <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
                         
                         }
